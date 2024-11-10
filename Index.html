@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji-Statistik Offline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+                    console.log('Service Worker registriert:', registration);
+                }).catch((error) => {
+                    console.error('Service Worker-Registrierung fehlgeschlagen:', error);
+                });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="uploadForm">
+            <div class="file-upload" id="uploadButton">Datei auswählen</div>
+            <input type="file" id="fileInput" />
+            <p id="selectedFileName" style="color: white;"></p>
+            <br>
+            <button type="submit">Datei Analysieren</button>
+        </form>
+        <canvas id="myChart" style="display: none;"></canvas>
+        <div class="result" id="result"></div>
+    </div>
+</body>
+
+</html>

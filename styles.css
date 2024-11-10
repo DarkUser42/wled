@@ -1,0 +1,93 @@
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', Arial, sans-serif;
+    background-color: #1e1e1e;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0;
+    text-align: left;
+}
+
+form {
+    margin: 50px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        margin: 0;
+        font-size: 30px;
+    }
+}
+
+.file-upload {
+    font-size: 30px;
+    width: 50%;
+    height: 45px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b4549c;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px 0;
+    user-select: none;
+}
+
+/* Unsichtbares Datei-Input */
+#fileInput {
+    display: none;
+    /* Versteckt das Datei-Input-Feld */
+}
+
+button {
+    font-size: 30px;
+    width: 55%;
+    height: 65px;
+    background-color: #5c9db7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.result {
+    margin-top: 30px;
+    color: white;
+    font-size: 50px;
+
+    p {
+        margin: 25px 0;
+        font-size: 50px;
+    }
+}
+
+.emoji {
+    font-size: 65px;
+}
+
+@media (orientation: landscape) {
+    .emoji {
+        font-family: 'Noto Color Emoji', sans-serif;
+    }
+}
+
+#myChart {
+    width: 90% !important;
+    height: 90% !important;
+    /* Höhe des Diagramms */
+}
